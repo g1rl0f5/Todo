@@ -11,7 +11,7 @@ function Create() {
       return;
     }
 
-    axios.post('http://localhost:3001/add', { task })
+    axios.post('https://todo-lq1p.onrender.com/add', { task })
       .then(() => {
         setTask('');
         setError('');
