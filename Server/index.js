@@ -7,6 +7,15 @@ const app =express()
 app.use(cors())
 app.use(express.json())
 
+const cors = require('cors');
+
+app.use(cors({
+  origin: 'https://todo-git-main-g1rl0f5s-projects.vercel.app', // ✅ your Vercel frontend URL
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
+}));
+
+
 mongoose.connect('mongodb://127.0.0.1:27017/test')
 
 app.get('/get', (req,res) => {
