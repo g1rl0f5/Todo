@@ -5,17 +5,24 @@ const TodoModel = require('./models/Todo');
 
 const app = express();
 
-// ✅ Use CORS config
 const allowedOrigins = [
   'http://localhost:3000',
-  'https://todo-ashen-beta.vercel.app'
+  'https://todo-ashen-beta.vercel.app',
+  'https://todo-git-main-g1rl0f5s-projects.vercel.app'
 ];
 
 app.use(cors({
-  origin: allowedOrigins,
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
+
 
 app.use(express.json());
 
