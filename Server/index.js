@@ -9,8 +9,13 @@ app.use(express.json())
 
 const cors = require('cors');
 
+const allowedOrigins = [
+  'http://localhost:3000',                          // for development
+  'https://todo-ashen-beta.vercel.app'              // for production
+];
+
 app.use(cors({
-  origin: 'https://todo-git-main-g1rl0f5s-projects.vercel.app', // ✅ your Vercel frontend URL
+  origin: allowedOrigins,
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true
 }));
