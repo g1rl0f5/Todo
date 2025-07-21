@@ -1,0 +1,240 @@
+
+
+/* App.css or index.css */
+body {
+  margin: 0;
+  padding: 0;
+  background: url('https://images.unsplash.com/photo-1516280030429-27679b3dc9cf?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Home Container */
+.home {
+  max-width: 90%;
+  width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Heading */
+.home h2 {
+  text-align: center;
+  color: #222;
+  margin-bottom: 10px;
+}
+
+/* Create Form */
+.create_form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.create_form input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.create_form input:focus {
+  border-color: #555;
+}
+
+.create_form button {
+  padding: 12px;
+  background-color: #222;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.create_form button:hover {
+  background-color: #444;
+}
+
+/* Todo Item */
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  transition: background-color 0.2s ease;
+}
+
+.todo-item:hover {
+  background-color: #e4e4e4;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  cursor: pointer;
+}
+
+.checkbox p {
+  margin: 0;
+  font-size: 17px;
+  color: #333;
+}
+
+/* Icon Styling */
+.icon {
+  font-size: 20px;
+  color: #666;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+.icon:hover {
+  color: #000;
+}
+
+/* Line-through for completed tasks */
+.line_through {
+  text-decoration: line-through;
+  color: #999;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+  .home {
+    width: 95%;
+    padding: 16px;
+  }
+
+  .create_form input {
+    font-size: 15px;
+  }
+
+  .create_form button {
+    font-size: 15px;
+  }
+
+  .checkbox p {
+    font-size: 16px;
+  }
+
+  .icon {
+    font-size: 18px;
+  }
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 6px;
+  padding-left: 4px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .home{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.create_form input{
+  width: 300px;
+  padding: 10px;
+  border-bottom: 2px solid;
+  outline: none;
+}
+.create_form button{
+  padding: 10px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.home {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.home h2 {
+  text-align: center;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+
+.todo-item {
+  padding: 10px;
+  margin: 8px 0;
+  background-color: #f2f2f2;
+  border-radius: 6px;
+  font-size: 18px;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  transition: background-color 0.2s ease;
+}
+
+.todo-item:hover {
+  background-color: #e0e0e0;
+} */
