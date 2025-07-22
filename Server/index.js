@@ -5,7 +5,7 @@ const TodoModel = require('./models/Todo');
 
 const app = express();
 
-mongoose.connect('mongodb+srv://anjithasuresh2001:<db_password>@clustertodolist.qahs2ae.mongodb.net/?retryWrites=true&w=majority&appName=clustertodolist', {
+mongoose.connect('mongodb+srv://anjithasuresh2001:@clustertodolist.qahs2ae.mongodb.net/?retryWrites=true&w=majority&appName=clustertodolist', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
