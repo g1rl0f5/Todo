@@ -5,16 +5,15 @@ const TodoModel = require('./models/Todo');
 
 const app = express();
 
-// ✅ CORS Setup
 const allowedOrigins = [
-  'http://localhost:3000', // local dev
-  'https://todo-ashen-beta.vercel.app', // your Vercel front-end
-  'https://todo-git-main-g1rl0f5s-projects.vercel.app' // alternative domain if needed
+  'http://localhost:5173',  // ✅ local Vite frontend
+  'https://todo-ashen-beta.vercel.app', // ✅ deployed frontend
+  'https://todo-git-main-g1rl0f5s-projects.vercel.app'
 ];
+
 
 app.use(cors({
   origin: function (origin, callback) {
-    // allow requests with no origin (like mobile apps or curl)
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {

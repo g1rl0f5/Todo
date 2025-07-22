@@ -11,7 +11,7 @@ function Create() {
       return;
     }
 
-    axios.post('https://todo-lq1p.onrender.com/add', { task })
+    axios.post('https://mern-todo-zor9.onrender.com/add', { task })
       .then(() => {
         setTask('');
         setError('');

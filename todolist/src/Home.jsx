@@ -11,28 +11,26 @@ function Home() {
     const [todos, setTodos]=useState([])
 
     useEffect( ()=> {
-      axios.get('https://todo-lq1p.onrender.com/get')
+axios.get('https://mern-todo-zor9.onrender.com/get')
       .then(result => setTodos(result.data))
       .catch(err => console.log(err))
     }, [])
 
     const fetchTodos = () => {
-  axios.get('https://todo-lq1p.onrender.com/get')
+axios.get('https://mern-todo-zor9.onrender.com/get')
     .then(result => setTodos(result.data))
     .catch(err => console.log(err));
 };
 
 
 const handleEdit = (id) => {
-axios.put('https://todo-lq1p.onrender.com/update/'+ id)
-      .then(() => fetchTodos())
+axios.put('https://mern-todo-zor9.onrender.com/update/' + id)      .then(() => fetchTodos())
 
       .catch(err => console.log(err))
 }
 
 const handleDelete = (id) => {
-  axios.delete('https://todo-lq1p.onrender.com/delete/'+ id)
-     .then(() => fetchTodos())
+axios.delete('https://mern-todo-zor9.onrender.com/delete/' + id)     .then(() => fetchTodos())
 
       .catch(err => console.log(err))
 }
