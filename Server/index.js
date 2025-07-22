@@ -5,6 +5,13 @@ const TodoModel = require('./models/Todo');
 
 const app = express();
 
+mongoose.connect('mongodb+srv://anjithasuresh2001:<db_password>@clustertodolist.qahs2ae.mongodb.net/?retryWrites=true&w=majority&appName=clustertodolist', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+.then(() => console.log("✅ MongoDB Atlas connected"))
+.catch(err => console.error("❌ MongoDB connection error:", err));
+
 const allowedOrigins = [
   'http://localhost:5173',  // ✅ local Vite frontend
   'https://todo-ashen-beta.vercel.app', // ✅ deployed frontend
